@@ -1,0 +1,9 @@
+<li>
+	<%= link_to bookmark.title, bookmark.url %><!-- zeige title im view als link-->
+	<!-- (<%= link_to "Details", bookmark_path(bookmark.id) %>) -->
+	(<%= link_to t("links.detail_bookmark"), bookmark_path(bookmark) %> |
+	<%= link_to t("links.edit_bookmark"), edit_bookmark_path(bookmark) %> |
+	<%= link_to t("links.delete_bookmark"), bookmark, :data => {confirm: t("messages.confirm_delete")}, method: :delete %>)
+	<!-- to_param liefert fuer ActiveRecord-Obj. standardmaessig
+	die ID zurueck, daher reicht bookmark-Obj.-->
+</li>

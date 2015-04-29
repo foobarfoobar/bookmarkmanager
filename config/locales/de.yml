@@ -1,0 +1,51 @@
+de:
+  activerecord:
+    models:
+      bookmark: "Favorit"
+      user: "Benutzer"
+    attributes:
+      bookmark:
+        title: "Titel"
+        url: "URL"
+        comment: "Kommentar"
+        created_at: "Erstellt am"
+        updated_at: "Geändert am"
+      user:
+        email: "E-Mail"
+        password_digest: "Passwort"
+        password: "Passwort"
+        password_confirmation: "Passwortbestätigung"
+  links:
+    my_bookmarks: "Meine Bookmarks"
+    new_user: "Benutzerkonto erstellen"
+    back_to_bookmarks: "Zurück zur Liste"
+    new_bookmark: "Neuen Favorit erstellen"
+    detail_bookmark: "Details"
+    edit_bookmark: "ändern"
+    delete_bookmark: "löschen"
+    login: "Einloggen"
+    logout: "Ausloggen"
+  messages: 
+    new_bookmark: "Favorit erfolgreich angelegt."
+    edit_bookmark: "Favorit erfolgreich geändert."
+    delete_bookmark: "Favorit erfolgreich gelöscht."
+    not_logged_in: "Bitte melden Sie sich an."
+    new_user: Ihr Benutzerkonto wurde angelegt!
+    login: "Sie haben sich angemeldet!"
+    logout: "Sie haben sich abgemeldet!"
+    login_failure: "Fehlerhafte E-Mail-Adresse oder Passwort"
+    confirm_delete: "Wollen Sie diesen Datensatz wirklich löschen?"
+  text:
+    my_bookmarks: "Meine Linksammlung"
+    list_of_bookmarks: "Alle Favoriten"
+    new_bookmark: "Neuen Favoriten erstellen"
+    detail_bookmark: "Detail zum Favoriten"
+    edit_bookmark: "Favorit bearbeiten"
+    new_user: "Neuen Benutzer anlegen"
+    login: "Log in"
+    new: "neu"
+    edit: "bearbeiten"
+    list: "liste"
+    email: "E-Mail"
+    password: "Passwort"
+    unnamed: "Unbenannt"

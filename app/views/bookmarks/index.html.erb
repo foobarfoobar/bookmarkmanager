@@ -1,0 +1,16 @@
+<% @title = t("text.list") %>
+<h2><%= t("text.list_of_bookmarks")%></h2>
+<ul>
+	<%= render @bookmarks %> <!-- rendert Inhalt der Partial _bookmark.html.erb; kann hier so aufgerufen werden, 
+		da Partial-Datei wie Instanzvariable heißt, sonst: _ruby_tag_start render partial: "bookmark", collection: @bookmarks _ruby_tag_end-->
+</ul>
+</br>
+<!-- <p>
+	<%= flash[:notice] %>	<!-- Anzeige flash-Message 
+		ausgelagert in application.html.erb, da diese fuer alle Seiten gueltig ist
+</p> -->
+<p>
+	<%= link_to t("links.new_bookmark"), new_bookmark_path %>
+	<br/>
+	<%= link_to t("links.new_user"), new_user_path %>
+</p>

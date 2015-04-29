@@ -1,0 +1,56 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  links:
+    my_bookmarks: "My Bookmarks"
+    new_user: "Create user account"
+    back_to_bookmarks: "Back to list"
+    new_bookmark: "Create new Bookmark"
+    detail_bookmark: "Details"
+    edit_bookmark: "change"
+    delete_bookmark: "delete"
+    login: "Log-in"
+    logout: "Log-out"
+  messages: 
+    new_bookmark: "Bookmark successful created."
+    edit_bookmark: "Bookmark successful changed."
+    delete_bookmark: "Bookmark successful deleted."
+    not_logged_in: "Please log-in."
+    new_user: Your account has been created!
+    login: "You are logged in!"
+    logout: "You are logged out!"
+    login_failure: "Incorrect e-mail or password!"
+    confirm_delete: "Do you really want delete this record?"
+  text:
+    my_bookmarks: "My Links"
+    list_of_bookmarks: "All Bookmarks"
+    new_bookmark: "Create new Bookmark"
+    detail_bookmark: "Detail of Bookmark"
+    edit_bookmark: "Edit Bookmark"
+    new_user: "Create new user"
+    login: "Log in"
+    new: "new"
+    edit: "edit"
+    list: "list"
+    email: "e-mail"
+    password: "Password"
+    unnamed: "Unnamed"

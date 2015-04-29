@@ -1,0 +1,5 @@
+<% @title = t("text.edit") %>
+<h2><%= t("text.edit_bookmark")%></h2>
+<%= render "form" %> <!-- called partial _form.html.erb -->
+<!-- <p><%= link_to "Zurück zur Liste", bookmarks_path %></p> ersetzt mittels helper durch untenstehenden Code-->
+<%= back_to_list %>

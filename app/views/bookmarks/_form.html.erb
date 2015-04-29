@@ -1,0 +1,26 @@
+<%= form_for(@bookmark) do |f| %>
+
+<% if @bookmark.errors.any? %>	<!-- Fehlerbehandlung bzw Anzeige -->
+<ul>
+	<% @bookmark.errors.full_messages.each do |msg| %>
+	<li><%= msg %></li>
+	<% end %>
+</ul>
+<% end %>
+
+<p>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+</p>
+<p>
+	<%= f.label :url %>
+	<%= f.text_field :url %>
+</p>
+<p>
+	<%= f.label :comment %>
+	<%= f.text_area :comment %>
+</p>
+<p>
+	<%= f.submit %>
+</p>
+<% end %>

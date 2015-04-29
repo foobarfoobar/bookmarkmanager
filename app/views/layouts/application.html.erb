@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bookmarkmanager - <%= @title || t("text.unnamed") %></title><!-- alternativer Titel aus den views-->
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<h1><%= t("text.my_bookmarks") %></h1>
+			</div>
+			<div id="content">
+				<% if flash[:notice] %>
+				<p id="notice">
+					<%= flash[:notice] %> <!-- Anzeige flash-Message, wenn hier definiert: Anzeige in
+					allen Seiten, wo notice: "Foo" definiert ist -->
+				</p>
+				<% end %>
+				<% if flash[:alert] %>
+				<p id="alert">
+					<%= flash[:alert] %> <!-- Anzeige alert-Message, wenn hier definiert: Anzeige in
+					allen Seiten, wo alert: "Foo" definiert ist -->
+				</p>
+				<% end %>
+				<%= yield %><!-- #yield heisst Inhalt, also der Inhalt der Schleife wird ausgegeben -->
+			</div>
+			<div id="footer"> <!-- soll fuer alle Seiten angezeigt werden, deshalb hier in application.html -->
+				&copy; 2015 |
+				<% if user_signed_in? %>
+					<%= ActionController::Base.helpers.link_to "logout", logout_path, method: :delete %>
+				<% else %>
+					<%= ActionController::Base.helpers.link_to "login", login_path %>
+				<% end %>
+				<div id="locales">
+					<%= link_to "deutsch", locale_path('de') %>
+					<%= link_to "english", locale_path('en') %>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
