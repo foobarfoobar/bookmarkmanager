@@ -49,7 +49,15 @@ class BookmarksController < ApplicationController
   def destroy
     @bookmark = current_user.bookmarks.find(params[:id]) #Bookmark.find(params[:id])
     @bookmark.destroy
-    redirect_to bookmarks_url, notice: t("messages.delete_bookmark")
+    
+    respond_to do |format|
+      # format.html {redirect_to bookmarks_url}
+      # format.json {head :ok}
+      format.js#Akzeptiere JS AJAX -anfrage
+    end
+    
+    # redirect_to bookmarks_url, notice: t("messages.delete_bookmark") #entfaellt bei AJAX ->you may only
+                                                                    #call render OR redirect
   end
   
   private
