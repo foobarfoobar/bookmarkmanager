@@ -1,5 +1,5 @@
 <h2><%= t("text.login") %></h2>
-<%= form_tag sessions_path do %>
+<%= form_tag sessions_path do |f|%>
   <p>
   	<%= label_tag :email, t("text.email") %> <!-- Login-Form. basiert nicht auf ActiveRecord.Model, 
   	somit keine automatischen Uebersetzungen - deswegen 't' -->
@@ -9,5 +9,5 @@
   	<%= label_tag :password, t("text.password") %>
   	<%= password_field_tag :password %>
   </p>
-  <p><%= submit_tag  %>
+  <p><%= submit_tag t("links.login") %> <!-- ..keine automat. Uebersetzung.. -->
 <% end %>
