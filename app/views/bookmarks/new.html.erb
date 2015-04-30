@@ -1,4 +1,4 @@
 <% @title = t("text.new") %>
-<h2><%= t("links.new_bookmark") %></h2>
+<h2><%= t 'new_bookmark', scope: 'links' %></h2> <!-- bei Verschachtelungen translation auch so moeglich -->
 <%= render "form" %> <!-- called partial _form.html.erb -->
 <%= back_to_list %> <!-- definiert in helper-class -->
