@@ -14,10 +14,10 @@
 </p>
 <p>
 	<b><%= t("activerecord.attributes.bookmark.created_at") %>:</b>
-	<%= l @bookmark.created_at, format: :short %> <!--l:  localize time format -->
+	<%= l @bookmark.created_at.getlocal, format: :short %> <!--l:  localize time format, getlocal: wandelt Zeit in lokale Zeit -->
 </p>
 <p>
 	<b><%= t("activerecord.attributes.bookmark.updated_at") %>:</b>
-	<%= l @bookmark.updated_at %>
+	<%= l @bookmark.updated_at.getlocal %>
 </p>
 <%= back_to_list %>

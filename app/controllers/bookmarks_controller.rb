@@ -32,6 +32,7 @@ class BookmarksController < ApplicationController
           #params[:ObjektnameDesUebergebenenObjekts]
     
     if @bookmark.save #erfolgreich gespeichert, Anzeige index-Seite
+      ConfirmationMailer.confirmation().deliver
       redirect_to bookmarks_path, notice: t("messages.new_bookmark")
     else
       render "new"  #Fehler (nicht alle Pflichtfelder ausgefüllt), Neuzeichnen der New-Seite, Daten bleiben erhalten
