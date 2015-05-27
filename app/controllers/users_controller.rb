@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
  #soll Anmeldeformular laden und verarbeiten, wenn es abgeschickt wird
+ around_filter :timing #wird vor und nach angefragter Action ausgefuehrt, ist unten definiert
+ 
   def new
     @user = User.new
   end
@@ -16,6 +18,12 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation)
+  end
+  
+  def timing
+    logger.info("vorher: #{Time.now}") #schreibt in development.log
+    yield #Aufruf der Action
+    logger.info("nachher: #{Time.now}")
   end
   
 end

@@ -16,8 +16,7 @@ class ApplicationController < ActionController::Base
   
   def user_signed_in?
     current_user.present?
-  end
-  
+  end  
   helper_method :user_signed_in? #als helper methode deklarieren
   
   def set_locale
@@ -38,8 +37,7 @@ class ApplicationController < ActionController::Base
     else
       "/#{locale}#{request.env['PATH_INFO']}"
     end
-  end
-  
+  end  
   helper_method :locale_path#als helper zur Verfuegung stellen; kann man auch im view drauf zugreifen
   
 end

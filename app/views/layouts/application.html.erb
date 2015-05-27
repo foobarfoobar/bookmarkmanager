@@ -12,7 +12,7 @@
 				<h1><%= t("text.my_bookmarks") %></h1>
 			</div>
 			<div id="content">
-				<% if flash[:notice] %>
+				<% if flash[:notice] %> <!-- Bereich nur anzeigen, wenn Message gesetzt -->
 				<p id="notice">
 					<%= flash[:notice] %> <!-- Anzeige flash-Message, wenn hier definiert: Anzeige in
 					allen Seiten, wo notice: "Foo" definiert ist -->
