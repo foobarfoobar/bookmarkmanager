@@ -10,8 +10,9 @@ Rails.application.routes.draw do
   
   #____________________mit locale_switcher, 'de' im Pfad______________________________
   scope "(:locale)", locale: /en|de/ do #um 'de' allen durchs Routing generierten Pfaden voranzustellen
-    resources :bookmarks, constraints: {id: /[0-9+]/}    #Routing-Helper nach REST-Standard, ersetzt die 7 bookmark-Routing-Eintraege unten
+    resources :bookmarks#, constraints: {id: /[0-9+]/}    #Routing-Helper nach REST-Standard, ersetzt die 7 bookmark-Routing-Eintraege unten
                           # constraints: Bedingung: id ist Zahl; Rails gibt bspw. andere Meldung wenn /aa eingegeben wird
+                          # funzt hier weil nicht nur fuer id-Uebergabe?
     resources :users, only: [:new, :create] #stellt u.a. new_user_path zur Verfuegung
     get "login" => "sessions#new", as: "login"
     post "sessions" => "sessions#create", as: "sessions" #stellt sessions_path und sessions_url zur Verfuegung
